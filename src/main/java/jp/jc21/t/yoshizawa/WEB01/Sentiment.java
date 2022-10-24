@@ -14,10 +14,19 @@ public class Sentiment {
 	public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 		Sentiment_doc  message = getSentiment("Stepover Toehold With Facelock");
 		if (message != null) {
-			System.out.println(message.documents[0].sentiment);
+			double negative = message.documents[0].confidenceScores.negative;
+			double neutral = message.documents[0].confidenceScores.neutral;
+			double positive = message.documents[0].confidenceScores.positive;
+			System.out.println("negative:"+negative);
+			System.out.println("neutral:"+neutral);
+			System.out.println("positive:"+positive);
 		}
 	}
 
+
+		
+		
+	
 	static Sentiment_doc getSentiment(String s) throws IOException, URISyntaxException, InterruptedException {
 		Gson gson = new Gson();
 		
