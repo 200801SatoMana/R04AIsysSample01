@@ -10,7 +10,7 @@
 <body>
 <h1>CognitiveServiceを使うサイト</h1>
 <h3>調べたい文字列を入れてください</h3>
-<form method="POST" action="./result">
+<form method="POST" action="./SentimentResult">
 <input type = "TEXT" name ="sentiment_string"/>
 <input type = "submit"/>
 </form>
